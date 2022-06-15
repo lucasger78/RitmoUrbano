@@ -49,7 +49,7 @@ class Curso(models.Model):
     
 class Contacto(models.Model):
     nombre = models.CharField(max_length=40)
-    email = models.EmailField
+    email = models.EmailField(null=True)
     telefono = models.IntegerField()
     mensaje = models.TextField()
     

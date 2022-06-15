@@ -133,7 +133,7 @@ def profesorFormulario(request):
     return render (request, "AppRitmoUrbano/profesorFormulario.html", {"miFormularioBlog":miFormulario})
 
 def contactoFormulario(request):
-    contacto = request.user
+     
     
     if request.method == "POST":
         miFormulario = ContactoFormulario(request.POST, request.FILES)                                                                     
@@ -144,10 +144,7 @@ def contactoFormulario(request):
          
             informacion = miFormulario.cleaned_data
             
-            contacto.nombre = informacion['nombre']
-            contacto.email = informacion['email']
-            contacto.telefono = informacion['telefono']
-            contacto.mensaje = informacion['mensaje']
+            contacto = Contacto(nombre=informacion['nombre'], email=informacion['email'], telefono=informacion['telefono'], mensaje=informacion['mensaje']) 
                      
             contacto.save()
                                                                                             
