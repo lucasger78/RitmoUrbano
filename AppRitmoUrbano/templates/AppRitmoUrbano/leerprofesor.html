@@ -1,0 +1,72 @@
+{% extends "AppRitmoUrbano/inicio.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-48 offset-md-5">
+    
+        <div class="col-xl-3">
+            <h4 style="font-family: montserrat extrabold, helvetica neue, open sans, source Sans pro ; color: white">BUSCA UN PROFESOR</h4>
+
+            <form action="resultadoBusqueda2" method="POST">{% csrf_token %}
+
+                <input type="text" name="query" required>
+
+                <input style= "font-family: montserrat extrabold, helvetica neue, open sans, source sans pro" class=" col-auto btn btn-primary btn-sg" type="submit" value="Buscar">
+
+            </form>
+        </div>
+    
+    
+
+    <br><br>
+    {% if request.user.is_authenticated %}
+        <a href={% url 'ProfesorFormulario' %}><button class=" col-auto btn btn-primary btn-lg" style="font-family: montserrat extrabold, helvetica neue, open sans, source Sans pro">Agregar nuevo Profesor</button></a>
+    {% else %}
+        <a href={% url 'Login' %} class=" col-auto btn btn-primary btn-lg" style="color: white;">Inicia sesión para crear Profesores</a>
+    {% endif %}
+
+    </div>
+        </div>
+            </div>
+    <br><br>
+
+
+    {% for p in profesor %}
+
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="product-item-title d-flex">
+                            <div class="bg-faded p-5 d-flex ms-auto rounded">
+    
+            
+                            <img src="{{p.imagen.url}}" class="product-item-img mx-auto d-flex rounded img-fluid mb-4 mb-lg-1" alt="...">
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-2">
+     
+                  </div>
+                  <div class="col-md-10">
+                    <div class="card-body">
+                        <h5 class="card-title" style= "font-family: montserrat semibold, helvetica neue, open sans, source sans pro">Nombre y Apellido: {{p.nombre}} {{p.apellido}}</h5> 
+                        <p class="card-text" style= "font-family: montserrat, helvetica neue, open sans, source sans pro">Clase: {{p.curso}}</p>
+                        <p class="card-text" style= "font-family: montserrat, helvetica neue, open sans, source sans pro">Tel: {{p.telefono}}</p>
+                        <p class="card-text" style= "font-family: montserrat, helvetica neue, open sans, source sans pro"><small class="text-muted">Observaciones: {{p.observaciones}}</small></p>
+                    </div>
+                  </div>
+                </div>
+    
+                
+            </div>
+    
+        </div>
+            </div>
+    <br>
+    <br>
+
+        
+    {% endfor %}
+
+{% endblock %}

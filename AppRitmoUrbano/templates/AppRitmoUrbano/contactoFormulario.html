@@ -1,0 +1,66 @@
+{% extends "AppRitmoUrbano\inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+  
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-48 offset-md-3">
+                <div class="product-item-description d-flex ms-auto">
+                    <div class="bg-faded p-3 rounded">
+
+    <p class="section-heading-upper; col-md-11 offset-md-3" style="color:dark brown; font-family: montserrat black; font-size: 2.0em;">Envianos tu Mensaje:</p>     
+
+    <p style="color: red; text-center; font-family: montserrat black; font-size: 2.0em;">{{ mensaje }}</p>
+
+    <form action="" method="POST" class= "col-md-3 offset-md-4" style="color:dark brown; font-family: montserrat semibold; font-size: 0.9em;" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <table class="form-style">
+            {{miFormularioBlog.as_p}}
+        </table>
+        <input class=" col-md-5 offset-md-4 btn btn-primary btn-sg" type="submit", value="Enviar"> <br> <br><button class=" col-md-11 offset-md-1 btn btn-primary btn-sg">
+            <a href = "{% url 'Inicio' %}" style="color:white; font-family: montserrat semibold; text-decoration: none;">Volver a Inicio</a></button>
+    </form>  
+    <div class="product-item-description d-flex ms-auto">  
+        <div class="product-item-description d-flex me-auto">
+            <div class="bg-faded p-5 rounded">
+                <h6 class="text-center" style= "font-family: montserrat black, helvetica neue, open sans, source Sans pro">Buscanos en Instagram      
+                    <br>
+                    <br>
+                    <a href="https://www.instagram.com/ritmourbanocba/"> 
+                        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static "AppRitmoUrbano\assets\img\LogInsta.png" %}" alt="..." /> 
+                        </a>
+                    <br> 
+                    ritmourbanocba                                            
+                </h6></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+            <div class="bg-faded p-5 rounded">
+                <h6 class="text-center" style= "font-family: montserrat black, helvetica neue, open sans, source Sans pro" >Escribinos a nuestro Whatsapp<br><br> 
+                    <a href="https://walink.co/61d989"> 
+                        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static "AppRitmoUrbano\assets\img\LogWhats.png" %}" alt="..." /> 
+                    </a> 
+                    <br> +54 9 3517 61-2165 </h6>
+                
+            </div> 
+            
+    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+{% endblock %}
+<br>
+<br>
+    
+
+    
+
+

@@ -1,0 +1,45 @@
+{% extends "AppRitmoUrbano\inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+  
+    {% if miFormularioBlog.errors %}
+    <p style="color: red;">Los datos ingresados no son correctos</p>
+    {% endif %}
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="product-item-description d-flex ms-auto">
+                    <div class="bg-faded p-3 rounded">
+
+    <p class="section-heading-upper" style="color:dark brown; font-family: montserrat black; font-size: 2.0em;">Igresar Alumno:</p>
+     
+
+    <p style="color: red;">{{ mensaje }}</p>
+
+    <form action="" method="POST" style="color:dark brown; font-family: montserrat semibold; font-size: 0.9em;" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <table class="form-style">
+            {{miFormularioBlog.as_p}}
+        </table>
+        <input class=" col-auto btn btn-primary btn-sg" type="submit", value="Enviar"> <button class=" col-auto btn btn-primary btn-sg">
+            <a href = "{% url 'LeerAlumno' %}" style="color:white; font-family: montserrat semibold; text-decoration: none;">Volver a Alumnos</a></button>
+    </form>  
+       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    
+
+    
+
+

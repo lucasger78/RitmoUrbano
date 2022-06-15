@@ -1,0 +1,81 @@
+{% extends "AppRitmoUrbano/inicio.html" %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div class="content container">
+  <div class="row">
+      <div class="col-md-48 offset-md-5">
+
+  <div class="col-xl-3">
+
+    <p style="color: white; font-family: montserrat semibold, helvetica neue, open sans, source sans pro;">Estamos buscando a: {{query}}</p>
+    <button class=" col-auto btn btn-primary btn-lg"><a href = "{% url 'Clases' %}" style="text-decoration: none; color: rgba(47, 23, 15, 0.65); 
+      font-family: montserrat extrabold, helvetica neue, open sans, source sans pro;">Volver a Clases</a></button>
+    <br><br>
+    <br>
+      </div>
+  </div>
+  </div>
+</div>
+    
+    {% if curso %}
+
+    {% for p in curso %}
+
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="product-item-title d-flex">
+                            <div class="bg-faded p-5 d-flex ms-auto rounded">
+    
+            
+                            <img src="{{p.imagen.url}}" class="product-item-img mx-auto d-flex rounded img-fluid mb-4 mb-lg-1" alt="...">
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-2">
+     
+                  </div>
+                  <div class="col-md-10">
+                    <div class="card-body">
+                      <h5 class="card-title" style= "font-family: montserrat semibold, helvetica neue, open sans, source sans pro">{{p.nombre}}</h5>
+                      <p style= "font-family: montserrat, helvetica neue, open sans, source sans pro">{{p.profesor}}</p>
+                      <p class="card-text" style= "font-family: montserrat, helvetica neue, open sans, source sans pro">{{p.dia}} {{p.horario}}</p>
+                      <p class="card-text" style= "font-family: montserrat, helvetica neue, open sans, source sans pro"><small class="text-muted">Observaciones: {{p.observaciones}}</small></p>
+                    </div>
+                  </div>
+                </div>
+    
+                
+            </div>
+    
+        </div>
+            </div>
+    <br>
+    <br>
+
+        
+    {% endfor %} 
+        
+
+    {% else %}
+    <div class="content container">
+      <div class="row">
+          <div class="col-md-40 offset-md-5">
+    
+      <div class="col-xl-3">
+
+        <p style="color: white; font-family: montserrat semibold, helvetica neue, open sans, source sans pro;">Nada por Aquí...Nada por Allá :(</p>
+      
+      </div>
+    </div>
+    </div>
+  </div>
+     
+    {% endif %}
+
+    <button class=" col-auto btn btn-primary btn-lg"><a href = "{% url 'Clases' %}" style="text-decoration: none; color: rgba(47, 23, 15, 0.65); 
+      font-family: montserrat extrabold, helvetica neue, open sans, source sans pro;">Volver a Clases</a></button>
+    <br><br>
+    <br>
+{% endblock %}

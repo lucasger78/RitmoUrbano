@@ -1,0 +1,7 @@
+C:\Users\Contis\Desktop\RitmoUrbano\AppRitmoUrbano\static\AppRitmoUrbano\assets\img\intro.png
+
+
+"{% static "AppRitmoUrbano\assets\img\products-01.jpg" %}"
+
+
+Te interesa permutar por una cámara Gopro Hero 4 Black? (te paso el link) https://www.facebook.com/groups/fotograficos/posts/5563415750356627/

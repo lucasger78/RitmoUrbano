@@ -1,0 +1,133 @@
+{% extends "AppRitmoUrbano/inicio.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-48 offset-md-0">
+
+    <div class="col-xl-3">
+        <h5 style="font-family: montserrat extrabold, helvetica neue, open sans, source Sans pro ; color: white">BUSCA UNA CLASE</h5>
+
+        <form action="resultadoBusqueda" method="POST">{% csrf_token %}
+
+            <input type="text" name="query" required>
+
+            <input style= "font-family: montserrat extrabold, helvetica neue, open sans, source sans pro" class=" col-auto btn btn-primary btn-sg" type="submit" value="Buscar">
+
+        </form>
+    </div>
+
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ms-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-lower">GUITARRA Clases Individuales</span>  
+                        <span class="section-heading-upper">Eléctrica Acústica Ukelele</span>                                              
+                    </h2>
+                    
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static "AppRitmoUrbano\assets\img\products-01.jpg" %}" alt="..." />
+            <div class="product-item-description d-flex me-auto">
+                <div class="bg-faded p-5 rounded"><p class="mb-0" style="font-family: montserrat, helvetica neue, open sans, source Sans pro">We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having. Whether it's our world famous Venezuelan Cappuccino, a refreshing iced herbal tea, or something as simple as a cup of speciality sourced black coffee, you will be coming back for more.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex me-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">clases Individuales</span>
+                        <span class="section-heading-lower">saxo alto - saxo tenor</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static "AppRitmoUrbano\assets\img\products-02.jpg" %}" alt="..." />
+            <div class="product-item-description d-flex ms-auto">
+                <div class="bg-faded p-5 rounded"><p class="mb-0" style="font-family: montserrat, helvetica neue, open sans, source Sans pro">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ms-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">clases Individuales</span>
+                        <span class="section-heading-lower">Flauta Traversa</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static "AppRitmoUrbano\assets\img\products-03.jpg" %}" alt="..." />
+            <div class="product-item-description d-flex me-auto">
+                <div class="bg-faded p-5 rounded"><p class="mb-0" style="font-family: montserrat, helvetica neue, open sans, source sans pro">Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ms-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Clases Individuales</span>
+                        <span class="section-heading-lower">Piano - Teclado</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static "AppRitmoUrbano\assets\img\products-04.jpg" %}" alt="..." />
+            <div class="product-item-description d-flex me-auto">
+                <div class="bg-faded p-5 rounded"><p class="mb-0" style="font-family: montserrat, helvetica neue, open sans, source Sans pro">We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having. Whether it's our world famous Venezuelan Cappuccino, a refreshing iced herbal tea, or something as simple as a cup of speciality sourced black coffee, you will be coming back for more.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex me-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Clases Grupales</span>
+                        <span class="section-heading-lower">Iniciación Musical</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static "AppRitmoUrbano\assets\img\products-05.jpg" %}" alt="..." />
+            <div class="product-item-description d-flex ms-auto">
+                <div class="bg-faded p-5 rounded"><p class="mb-0" style="font-family: montserrat, helvetica neue, open sans, source Sans pro">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ms-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Clases Grupales</span>
+                        <span class="section-heading-lower">Audio Perceptiva - Ensamble</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static "AppRitmoUrbano\assets\img\products-06.jpg" %}" alt="..." />
+            <div class="product-item-description d-flex me-auto">
+                <div class="bg-faded p-5 rounded"><p class="mb-0" style="font-family: montserrat, helvetica neue, open sans, source sans pro">Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

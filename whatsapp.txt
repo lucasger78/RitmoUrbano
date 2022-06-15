@@ -1,0 +1,7 @@
+<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static "AppRitmoUrbano\assets\img\LogWhats1.png" %}" alt="..." />
+
+
+https://walink.co/61d989
+
+
+Buscanos en Instagram   ritmourbanocba
