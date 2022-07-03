@@ -28,6 +28,10 @@ def curso(request):
     
     return render(request, 'AppRitmoUrbano/clases.html')
 
+def modalidades(request):
+    
+    return render(request, 'AppRitmoUrbano/modalidades.html')
+
 def staff(request):
     
     return render(request, 'AppRitmoUrbano/staff.html')

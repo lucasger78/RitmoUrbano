@@ -6,6 +6,7 @@ from AppRitmoUrbano import views
 urlpatterns = [
     path('', views.inicio, name='Inicio'),
     path('clases', views.curso, name="Clases"),
+    path('modalidades', views.modalidades, name="Modalidades"),
     path('staff', views.staff, name="Staff"),
     #path('alumno', views.alumno, name="Alumno"),
     #path('profesor', views.profesor, name="Profesor"),
