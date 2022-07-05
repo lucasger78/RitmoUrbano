@@ -7,9 +7,7 @@ urlpatterns = [
     path('', views.inicio, name='Inicio'),
     path('clases', views.curso, name="Clases"),
     path('modalidades', views.modalidades, name="Modalidades"),
-    path('staff', views.staff, name="Staff"),
-    #path('alumno', views.alumno, name="Alumno"),
-    #path('profesor', views.profesor, name="Profesor"),
+    path('staff', views.staff, name="Staff"),   
     path('nosotros', views.nosotros, name='Nosotros'),
     
     path('contactoFormulario', views.contactoFormulario, name='ContactoFormulario'),
@@ -19,10 +17,7 @@ urlpatterns = [
     path('alumno',views.leerAlumno, name="LeerAlumno"),
     path('profesorFormulario', views.profesorFormulario, name='ProfesorFormulario'), 
     path('profesor',views.leerProfesor, name="LeerProfesor"),
-    # path('eliminarPost/<post_titulo>/',views.eliminarPost, name="EliminarPost"),
-    # path('editarPost/<post_titulo>/', views.editarPost, name="EditarPost"),
-    
-    #path('buscar',views.buscar,name="buscar"),
+  
     path('resultadoBusqueda',views.busquedaCursos,name="busqueda"),
     path('resultadoBusqueda1',views.busquedaAlumnos,name="busqueda"),
     path('resultadoBusqueda2',views.busquedaProfesores,name="busqueda"),
