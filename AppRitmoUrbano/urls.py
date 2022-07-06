@@ -4,7 +4,7 @@ from AppRitmoUrbano.models import Profesor, Curso, Alumno
 from AppRitmoUrbano import views
 
 urlpatterns = [
-    path('', views.inicio, name='Inicio'),
+    path('', views.index, name='Index'),
     path('clases', views.curso, name="Clases"),
     path('modalidades', views.modalidades, name="Modalidades"),
     path('staff', views.staff, name="Staff"),   

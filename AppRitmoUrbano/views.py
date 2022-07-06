@@ -17,9 +17,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-def inicio(request):
+def index(request):
     
-    return render(request, 'AppRitmoUrbano/inicio.html')
+    return render(request, 'AppRitmoUrbano/index.html')
 
 def curso(request):
     
